@@ -42,25 +42,25 @@ const App = () => {
             setUser(userInfo);
         }
 
-        fetch("http://localhost:3001/gender-categories",{
+        fetch("https://wattuwer-server.herokuapp.com/gender-categories",{
             method : "GET"
         })
         .then(data => data.json())
         .then(genders => setGenderCategories(genders))
 
-        fetch("http://localhost:3001/categories",{
+        fetch("https://wattuwer-server.herokuapp.com/categories",{
             method : "GET"
-        })
+        }
         .then(data => data.json())
         .then(allCategories => setCategories(allCategories))
 
-        fetch("http://localhost:3001/products",{
+        fetch("https://wattuwer-server.herokuapp.com/products",{
             method : "GET"
         })
         .then(data => data.json())
         .then(allProducts => setProducts(allProducts))
 
-        fetch("http://localhost:3001/stocks",{
+        fetch("https://wattuwer-server.herokuapp.com/stocks",{
             method : "GET"
         })
         .then(data => data.json())
@@ -68,7 +68,7 @@ const App = () => {
 
         if(userInfo){
 
-            fetch("http://localhost:3001/transactions",{
+            fetch("https://wattuwer-server.herokuapp.com/transactions",{
                 method : "GET",
                 headers : {
                     "Authorization" : localStorage.getItem("token")
@@ -80,7 +80,7 @@ const App = () => {
             })
 
             // if(userInfo.role === "Admin"){
-                fetch("http://localhost:3001/messages",{
+                fetch("https://wattuwer-server.herokuapp.com/messages",{
                     method : "GET",
                     headers : {
                         "Authorization" : localStorage.getItem("token")

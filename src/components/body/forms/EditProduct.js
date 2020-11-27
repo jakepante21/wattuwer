@@ -46,11 +46,11 @@ const EditProduct = ({products,categories,genderCategories,crud}) => {
 			selectProductRef.current.classList.add("warning");
 		}else{
 			selectProductRef.current.classList.remove("warning");
-			fetch("http://localhost:3001/products/" + updateProduct._id, {
+			fetch("https://wattuwer-server.herokuapp.com/products/" + updateProduct._id, {
 				method : "PUT",
 				body : formData,
 				headers : {
-					"Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMGVjMjIxNjQ3OTNlMDllY2MwNzE1MiIsImlhdCI6MTU5NTQzMzA5N30.ZkBZWm7AWdomTQmYKWVmuGwB-dTP0QlWqBUWo0I0ONE"
+					"Authorization" : localStorage.getItem("token")
 				}
 			})
 			.then(data => data.json())
@@ -98,7 +98,7 @@ const EditProduct = ({products,categories,genderCategories,crud}) => {
 								""
 								:
 									<div className="edit-thumbnail">
-										<img src={"http://localhost:3001" + updateProduct.image} alt="product"/>
+										<img src={"https://wattuwer-server.herokuapp.com" + updateProduct.image} alt="product"/>
 									</div>
 							:
 							""

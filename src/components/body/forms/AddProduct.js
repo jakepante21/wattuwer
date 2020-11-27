@@ -84,11 +84,11 @@ const AddProduct = ({categories,genderCategories, crud}) =>{
 			formData.append("description",product.description);
 			formData.append("image",product.image);
 
-			fetch("http://localhost:3001/products/create",{
+			fetch("https://wattuwer-server.herokuapp.com/products/create",{
 				method : "POST",
 				body : formData,
 				headers : {
-					"Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmMGVjMjIxNjQ3OTNlMDllY2MwNzE1MiIsImlhdCI6MTU5NTQzMzA5N30.ZkBZWm7AWdomTQmYKWVmuGwB-dTP0QlWqBUWo0I0ONE"
+					"Authorization" : localStorage.getItem("token")
 				}
 			})
 			.then(data => data.json())

@@ -32,7 +32,7 @@ const TransactionsAdmin = ({transactions}) => {
 		if(user){
 			if(user.role === "Admin"){
 				if(transaction){
-					fetch("http://localhost:3001/transactions/" + transaction._id,{
+					fetch("https://wattuwer-server.herokuapp.com/transactions/" + transaction._id,{
 						method : "PUT",
 						body : JSON.stringify({status : e.target.id}),
 						headers : {
@@ -48,7 +48,7 @@ const TransactionsAdmin = ({transactions}) => {
 						if(result.status === "Completed"){
 							result.products.forEach(product => {
 								product.items.forEach(item => {
-									fetch("http://localhost:3001/sold-stocks/create",{
+									fetch("https://wattuwer-server.herokuapp.com/sold-stocks/create",{
 										method : "POST",
 										body : JSON.stringify({
 											_id : item._id,
@@ -63,7 +63,7 @@ const TransactionsAdmin = ({transactions}) => {
 									.then(data => data.json())
 									.then(stockDetails => {
 										console.log(stockDetails._id)
-										fetch("http://localhost:3001/order-stocks/admin-only/api/wattuwer/stock/" + stockDetails._id, {
+										fetch("https://wattuwer-server.herokuapp.com/order-stocks/admin-only/api/wattuwer/stock/" + stockDetails._id, {
 											method : "DELETE",
 											headers : {
 												"Authorization" : localStorage.getItem("token")

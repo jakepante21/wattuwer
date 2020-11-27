@@ -57,7 +57,7 @@ const ViewProduct = ({products,categories,changeQuantityRef,addToCartRef}) => {
 		})
 		
 		if(matchCategory){
-			fetch("http://localhost:3001/products/category/" + matchCategory._id,{
+			fetch("https://wattuwer-server.herokuapp.com/products/category/" + matchCategory._id,{
 				method : "GET"
 			})
 			.then(data => data.json())
@@ -109,7 +109,7 @@ const ViewProduct = ({products,categories,changeQuantityRef,addToCartRef}) => {
 									<div className="product-image-container">
 										<div className="overlay">
 										</div>
-										<img src={"http://localhost:3001" + prod.image} alt="product image.."/>
+										<img src={"https://wattuwer-server.herokuapp.com" + prod.image} alt="product image.."/>
 									</div>
 									<div className="product-info-container">
 										<div className="product-name-container">

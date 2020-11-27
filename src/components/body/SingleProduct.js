@@ -8,7 +8,7 @@ const SingleProduct = ({changeQuantityRef,addToCartRef}) => {
 
 	useEffect(() => {
 		let pathname = window.location.pathname;
-		fetch("http://localhost:3001" + pathname,{
+		fetch("https://wattuwer-server.herokuapp.com" + pathname,{
 			method : "GET"
 		})
 		.then(data => data.json())
@@ -54,7 +54,7 @@ const SingleProduct = ({changeQuantityRef,addToCartRef}) => {
 					product ?
 					<div className="product-container">
 						<div className="product-image-container">
-							<img src={"http://localhost:3001" + product.image}/>
+							<img src={"https://wattuwer-server.herokuapp.com" + product.image}/>
 						</div>
 						<div className="product-description">
 							<p>{product.description}</p>

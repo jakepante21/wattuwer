@@ -106,7 +106,7 @@ const CheckoutForm = ({products,stocks}) => {
 				)
 			})
 
-			fetch("http://localhost:3001/transactions/create",{
+			fetch("https://wattuwer-server.herokuapp.com/transactions/create",{
 				method : "POST",
 				body : JSON.stringify({
 					transactionCode : transactionCode,
@@ -134,7 +134,7 @@ const CheckoutForm = ({products,stocks}) => {
 					console.log(stockDetail._id)
 					console.log(stockDetail.codeNumber)
 					console.log(stockDetail.productId)
-					fetch("http://localhost:3001/order-stocks/create",{
+					fetch("https://wattuwer-server.herokuapp.com/order-stocks/create",{
 						method : "POST",
 						body : JSON.stringify({ 
 							_id : stockDetail._id , 
@@ -150,7 +150,7 @@ const CheckoutForm = ({products,stocks}) => {
 						console.log(result._id)
 						console.log(result.codeNumber)
 						console.log(result.productId)
-						fetch("http://localhost:3001/stocks/admin-only/api/wattuwer/stock/" + result._id, {
+						fetch("https://wattuwer-server.herokuapp.com/stocks/admin-only/api/wattuwer/stock/" + result._id, {
 							method : "DELETE"
 						})
 						.then(data => data.json())

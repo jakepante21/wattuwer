@@ -40,7 +40,7 @@ const ContactForm = () => {
 		}
 
 		if(completeForm){
-			fetch("http://localhost:3001/messages/create",{
+			fetch("https://wattuwer-server.herokuapp.com/messages/create",{
 				method : "POST",
 				body : JSON.stringify(contactForm),
 				headers : {

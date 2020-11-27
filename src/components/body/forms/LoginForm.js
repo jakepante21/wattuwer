@@ -32,7 +32,7 @@ const LoginForm = () =>{
 				passwordRef.current.classList.add("warning");
 			}
 		}else{
-			fetch("http://localhost:3001/users/login",{
+			fetch("https://wattuwer-server.herokuapp.com/users/login",{
 				method : "POST",
 				body : JSON.stringify(user),
 				headers : {
