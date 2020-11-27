@@ -50,7 +50,7 @@ const App = () => {
 
         fetch("https://wattuwer-server.herokuapp.com/categories",{
             method : "GET"
-        }
+        })
         .then(data => data.json())
         .then(allCategories => setCategories(allCategories))
 
