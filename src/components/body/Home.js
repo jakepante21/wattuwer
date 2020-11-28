@@ -186,7 +186,7 @@ const Home = ({products,categories,genderCategories,product,cartTotal,noOfCart,c
 															</div>
 															
 														</div>
-														<img src={"https://wattuwer-server.herokuapp.com" + product.image} alt="Wear"/>
+														<img src={product.image} alt="Wear"/>
 													</div>
 													<div className="carosel-image-description">
 														<p>
