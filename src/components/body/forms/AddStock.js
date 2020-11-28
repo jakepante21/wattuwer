@@ -95,7 +95,7 @@ const AddStock = ({products,crud}) =>{
 											</svg>
 										</button>
 									</div>
-									<img src={"http://localhost:3001" + product.image} alt="image here"/>
+									<img src={product.image} alt="image here"/>
 								</div>
 							)
 						})

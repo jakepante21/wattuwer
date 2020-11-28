@@ -109,7 +109,7 @@ const ViewProduct = ({products,categories,changeQuantityRef,addToCartRef}) => {
 									<div className="product-image-container">
 										<div className="overlay">
 										</div>
-										<img src={"https://wattuwer-server.herokuapp.com" + prod.image} alt="product image.."/>
+										<img src={"http://localhost:3001" + prod.image} alt="product image.."/>
 									</div>
 									<div className="product-info-container">
 										<div className="product-name-container">

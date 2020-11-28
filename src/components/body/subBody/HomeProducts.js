@@ -243,7 +243,7 @@ const HomeProducts = ({products,categories,genders,cartTotal,noOfCart,cartRef,ca
 											<Link to={"/products/" + product._id} className="home-view-product-button flex-column flex-center" target="_blank"><button>view item</button>
 											</Link>
 										</div>
-										<img src={"https://wattuwer-server.herokuapp.com" + product.image} alt="product image.."/>
+										<img src={product.image} alt="product image.."/>
 									</div>
 									<div className="flex-column flex-justify-center product-info-container">
 										<div className="flex-row flex-justify-center text product-name-container">

@@ -98,7 +98,7 @@ const EditProduct = ({products,categories,genderCategories,crud}) => {
 								""
 								:
 									<div className="edit-thumbnail">
-										<img src={"https://wattuwer-server.herokuapp.com" + updateProduct.image} alt="product"/>
+										<img src={updateProduct.image} alt="product"/>
 									</div>
 							:
 							""

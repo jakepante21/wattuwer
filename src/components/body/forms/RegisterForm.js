@@ -75,7 +75,8 @@ const RegisterForm = () => {
 			})
 			.then(data => data.json())
 			.then(result => {
-				console.log(result)
+				console.log(result);
+				window.location.href = "/login";
 			})
 		}
 	}
