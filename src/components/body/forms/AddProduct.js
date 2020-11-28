@@ -94,7 +94,7 @@ const AddProduct = ({categories,genderCategories, crud}) =>{
 			.then(data => data.json())
 			.then(result => {
 				console.log(result);
-				window.location.href = "/admin-panel";
+				// window.location.href = "/admin-panel";
 			})
 		}
 	}
